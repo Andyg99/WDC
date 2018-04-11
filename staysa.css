@@ -1,0 +1,74 @@
+#header{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:50px;
+  background-color:black;
+  display: table;
+  overflow: hidden;
+}
+
+#footer{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:80px;
+  background-color:black;
+  display: table;
+  overflow: hidden;
+}
+
+#homepage{
+  background-image: 
+}
+
+div.breaker{
+  width:100%;
+  height:30px;
+  background-color:green;
+}
+
+body{
+  font-family: 'Work Sans', sans-serif;
+  background-color: black;
+}
+
+span.title{
+  position: fixed;
+  display: table-cell;
+  vertical-align: middle;
+  left: 20px;
+  line-height: 1.5em;
+  font-size: 30px;
+  font-weight:bold;
+  color: white;
+}
+
+.right{
+  position: absolute;
+  right: 0px;
+}
+
+
+.left{
+  position: absolute;
+  left: 0px;
+}
+
+button.hfbutton{
+  position:relative;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  border: black 1px solid;
+}
+
+button.hfbutton:hover{
+  border: white 1px solid;
+  margin: auto;
+}
