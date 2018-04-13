@@ -25,56 +25,41 @@
 <style>
 * {box-sizing: border-box;}
 
-/*SEARCH BAR*/
+/*container for slideshow*/
+.sscontainer {
+  position: absolute;
+  min-width: 100%
+}
 
-.searchbar {
-  margin: auto;
-  width: 50%;
-  height: 100%;
+
+.sscontainer .search-container {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  margin-top: 300px;
   border: 3px white;
-  padding: 10px;
+  z-index: 1;  
 }
 
-.searchbar .search-container {
-  
-}
-
-.searchbar input[type=text] {
-  padding: 20px 300px;
+.sscontainer input[type=text] {
+  padding: 20px 275px;
   margin-top: 8px;
   font-size: 17px;
   border: none;
-}
-
-.searchbar .search-container button {
-  padding: 20px;
-  margin-top: 0px;
-  margin-right: 0px;
-  background: white;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-}
-
-.searchbar .search-container button:hover {
-  background: #ccc;
-}
-
-
-/*container for slideshow*/
-.sscontainer {
-  min-width: 100%
+  z-index: 1;
 }
 
 /*circles to indicate picture number*/
 .circle {
+  position: relative;
+  margin: 700px 2px;
   height: 10px;
   width: 10px;
-  margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
+  z-index:100;
 }
 
 .active {
@@ -100,18 +85,18 @@
 }
 
 @media screen and (max-width: 600px) {
-  .searchbar .search-container {
-    float: none;
+  .sscontainer.search-container {
+    position: absolute;
   }
-  .searchbar a, .searchbar input[type=text], .searchbar .search-container button {
-    float: none;
-    display: block;
+  .sscontainer, .sscontainer input[type=text], .sscontainer .search-container button {
+    position: absolute;
+    display: inline-block;
     text-align: left;
     width: 100%;
     margin: 0;
     padding: 14px;
   }
-  .searchbar input[type=text] {
+  .sscontainer input[type=text] {
     border: 1px solid #ccc;  
   }
 }
@@ -121,6 +106,25 @@
 </head>
 
 <div class="sscontainer">
+
+   <div class="search-container">
+    
+    <form action="/action_page.php">
+      <div style="text-align:center">
+      <input type="text" placeholder="Where in SA?..." name="Search">
+      </div>
+
+    </form>
+  </div>
+
+<div style="text-align:center">
+  <span class="circle"></span> 
+  <span class="circle"></span> 
+  <span class="circle"></span> 
+  <span class="circle"></span> 
+  <span class="circle"></span> 
+</div>
+</div>
 
 <div class="theSlides fade">
 
@@ -145,31 +149,7 @@
 </div>
 
 
-<div style="text-align:center">
-  <span class="circle"></span> 
-  <span class="circle"></span> 
-  <span class="circle"></span> 
-  <span class="circle"></span> 
-  <span class="circle"></span> 
 </div>
-
-
-
-
-<div class="searchbar">
-  <div class="search-container">
-    <form action="/action_page.php">
-      <input type="text" placeholder="Where in SA?..." name="Search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-  </div>
-</div>
-
-<div style="padding-left:16px">
-  <h2>Responsive Search Bar</h2>
-
-</div>
-
 
 
 <script>
@@ -197,6 +177,7 @@ function showSlides() {
 
 
   <div id="footer">
+
       <span class="left" style = "position: absolute; bottom: 0px; text-align: center">
 
         <button type="button" class="hfbutton" style="padding: 30px 32px">Privacy Policy</button>
@@ -215,3 +196,24 @@ function showSlides() {
     </div>
   </body>
 </html>
+
+<button type="submit"><i class="fa fa-search"></i></button>*/
+/*SEARCH BAR
+.sscontainer .search-container button {
+  
+
+  position: static;
+
+  padding: 20px;
+  background: white;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+.sscontainer .search-container button:hover {
+  
+  position: static;
+  background: #ccc;
+  z-index: 1;
+}
