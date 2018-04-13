@@ -8,26 +8,19 @@
   background-color:black;
   display: table;
   overflow: hidden;
-  z-index:100;
 }
 
 #footer{
-<<<<<<< HEAD
   position: fixed;
   z-index: 100;
   min-height: 10%;
   bottom:0;
-=======
-  position:absolute;
-  min-height: 100%
->>>>>>> a73c7e9d3a0f6220472c0b92a9d7bc7f4080beed
   left:0;
   width:100%;
   height:9%;
   background-color:black;
   display: table;
   overflow: hidden;
-  z-index:100;
 }
 
 #map{
@@ -172,7 +165,6 @@ button.hfbutton:hover{
   margin: auto;
 }
 
-<<<<<<< HEAD
 .bookbutton{
   position: absolute;
   background-color: black;
@@ -449,13 +441,3 @@ to {transform: scale(1)}
 
 
 /*Andys stuff end */
-=======
-* {box-sizing:border-box}
-
-* {box-sizing:border-box}
-
-
-
-
-
->>>>>>> a73c7e9d3a0f6220472c0b92a9d7bc7f4080beed

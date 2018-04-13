@@ -16,7 +16,6 @@ function searchHotels() {
   }
 }
 
-<<<<<<< HEAD
 var slideIndex = 0;
 function showSlides() {
 
@@ -271,5 +270,3 @@ function cancelsupport(){
 document.getElementById('support_id').style.display='none';
 }
 /* end of andys functions */
-=======
->>>>>>> a73c7e9d3a0f6220472c0b92a9d7bc7f4080beed
