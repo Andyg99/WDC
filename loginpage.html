@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+	<script language="JavaScript" type="text/javascript" src="staysa_andy.js"></script>
+    <link rel="stylesheet" type="text/css" href="staysa_andy.css">
+     <!-- I have linked my personal css for this file, this will need to be changed once they've been concatenated -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <title>STAY SA</title>
+  </head>
+  <body id = "loginsignup">
+    <div class="breaker"></div>
+    <div id="header">
+      <a href="index.html">
+        <span class = "title">
+          <i class="fa fa-cloud"></i>  STAY SA
+        </span>
+      </a>
+        <span class="right">
+          <button onclick= "signup();" type="button" class="hfbutton">Sign Up</button>
+          <button onclick= "login();" type="button" class="hfbutton">Login</button>
+        </span>
+    </div>
+
+	<!--  Code below is for the login box -->
+
+	<div id="login_id" class="loginbox" >
+		<form class="popup-content animate" action="/action_page.php" >
+    	<label for="uname"></label>
+      	<input type="text" placeholder="Enter Username" name="uname" required>
+
+     	<label for="pword"></label>
+      	<input type="password" placeholder="Enter Password" name="pword" required>
+
+        <button type="submit" class="login">Login</button>
+      	<button class="forgot" >Forgot Password?</button><br>
+      	<button type="button" onclick="cancellogin();" class="formcancel" >Cancel</button>
+      	</form>
+    </div>
+    <!-- Code below is for the signup box -->
+    <div id="signup_id" class="loginbox" >
+    	<form class="popup-content animate" action="/action_page.php" >
+    		<label for "fname"></label>
+    		<input type="text" placeholder="First Name" name="fname" required >
+
+    		<label for "lname"></label>
+    		<input type="text" placeholder="Last Name" name="lname" required >
+
+    		<label for "email"></label>
+    		<input type="text" placeholder="Your Email" id="email" required >
+
+    		<input type="text" placeholder="Confirm Email" id="confirm_email" required>
+
+    		<label for "password"></label>
+    		<input type="password" placeholder = "Enter password" id="password" required >
+
+    		<input type="password" placeholder="Confirm Password" id ="confirm_password" required >
+    		<br>
+    		<button type = "submit" class="submit" style="padding:15px 32px; margin:5px>">Submit</button>
+
+    		<button type= "button" onclick="cancelsignup();" class="cancelbtn" style="padding:15px 27px;margin:5px">Cancel</button>
+    	</form>
+    </div>
+
+    <div id="footer">
+      <span class="left" style = "position: absolute; bottom: 0px; text-align: center">
+        <button onclick="privacy();" type="button" class="fbutton">
+        	Privacy Policy
+        </button>
+        <button onclick="tacs();" type="button" class="fbutton">Terms and Conditions</button>
+        <button onclick="support();" type="button" class="fbutton">Support</button>
+
+      </span>
+      <span class = "right">
+        <p style = "text-align: center; color:white; margin:auto;font-size: 30px;">
+          Contact Us <br>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+        </p>
+      </span>
+    </div>
+
+    <!-- Code below is for the footer popups -->
+
+    <div id ="privacy_id" class="popup">
+    	<form class="popup-content animate">
+    		<h2 >Privacy Policy</h2>
+    			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget mattis enim. Donec rutrum ligula ut massa eleifend venenatis. Aliquam magna purus, aliquet ut felis vitae, pharetra ornare enim. Donec iaculis, elit quis interdum consectetur, neque ante lacinia massa, a pellentesque felis libero eu nulla. Nulla pulvinar vitae sapien sed viverra. Nullam ornare a lacus et finibus. Curabitur efficitur lorem non arcu faucibus accumsan. Aenean laoreet porttitor tellus eu vehicula.
+				<br><br>				Integer euismod quis ante vel malesuada. Nullam quis maximus metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris ac tortor sit amet felis rhoncus interdum in ut purus. Donec eget justo in purus accumsan semper. Morbi sit amet augue vehicula, pellentesque augue et, fermentum enim. Nam eget nunc justo. Donec elit sem, varius nec purus in, auctor pulvinar orci.
+				<br><br>Maecenas elementum dapibus lectus sit amet bibendum. Fusce ut mauris id risus facilisis semper. Proin orci enim, auctor vel facilisis sit amet, rutrum vel neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus odio nunc, vulputate ut libero vel, dapibus cursus ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam et laoreet erat, non ultricies turpis.</p>
+
+			<div class="container">
+      			<button type="button" onclick="cancelprivacy();" class="cancelbtn">Cancel</button>
+     
+    		</div>
+    	</div>
+	</form>	
+
+	<div id ="tacs_id" class="popup">
+		<form class="popup-content animate">
+			<h2>Terms and Conditions</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget mattis enim. Donec rutrum ligula ut massa eleifend venenatis. Aliquam magna purus, aliquet ut felis vitae, pharetra ornare enim. Donec iaculis, elit quis interdum consectetur, neque ante lacinia massa, a pellentesque felis libero eu nulla. Nulla pulvinar vitae sapien sed viverra. Nullam ornare a lacus et finibus. Curabitur efficitur lorem non arcu faucibus accumsan. Aenean laoreet porttitor tellus eu vehicula. 
+
+			<br><br>Integer euismod quis ante vel malesuada. Nullam quis maximus metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris ac tortor sit amet felis rhoncus interdum in ut purus. Donec eget justo in purus accumsan semper. Morbi sit amet augue vehicula, pellentesque augue et, fermentum enim. Nam eget nunc justo. Donec elit sem, varius nec purus in, auctor pulvinar orci.</p>
+			<div class="container">
+				<button type="button" onclick="canceltacs();" class="cancelbtn">Cancel</button>
+			</div>
+		</form>
+	</div>
+
+	<div id="support_id" class="popup">
+		<form class="popup-content animate">
+			<h2>Support</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget mattis enim. Donec rutrum ligula ut massa eleifend venenatis. Aliquam magna purus, aliquet ut felis vitae, pharetra ornare enim. Donec iaculis, elit quis interdum consectetur, neque ante lacinia massa, a pellentesque felis libero eu nulla. Nulla pulvinar vitae sapien sed viverra. Nullam ornare a lacus et finibus. Curabitur efficitur lorem non arcu faucibus accumsan. Aenean laoreet porttitor tellus eu vehicula.</p> <br><br>
+				<li>0448 911 900</li>
+				<br>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget mattis enim. Donec rutrum ligula ut massa eleifend venenatis. Aliquam magna purus, aliquet ut felis vitae, pharetra ornare enim. Donec iaculis, elit quis interdum consectetur, neque ante lacinia massa, a pellentesque felis libero eu nulla. Nulla pulvinar vitae sapien sed viverra. Nullam ornare a lacus et finibus. Curabitur efficitur lorem non arcu faucibus accumsan. Aenean laoreet porttitor tellus eu vehicula. 
+			</p>
+			<div class="container">
+				<button type="button" onclick="cancelsupport();" class="cancelbtn">Cancel</button>
+			</div>
+		</form>
+	</div>
+
+  </body>
+</html>

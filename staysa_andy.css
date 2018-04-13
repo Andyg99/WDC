@@ -1,0 +1,275 @@
+#header{
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:50px;
+	background-color:black;
+	display: table;
+	overflow: hidden;
+}
+
+#footer{
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:80px;
+	background-color:black;
+	display: table;
+	overflow: hidden;
+}
+
+#homepage{
+	background-image: 
+}
+
+
+
+div.breaker{
+	width:100%;
+	height:30px;
+	background-color:green;
+}
+
+body{
+	font-family: 'Work Sans', sans-serif;
+	background-image: url("adelaidepostoffice.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: black;
+}
+/*andy made these*/
+h2{
+	text-align: center;
+	font-family: 'Work Sans', sans-serif;
+}
+p{
+	padding:15px;
+	font-family: 'Work Sans', sans-serif;
+}
+/* end of what andy added */
+span.title{
+	position: fixed;
+	display: table-cell;
+	vertical-align: middle;
+	left: 20px;
+	line-height: 1.5em;
+	font-size: 30px;
+	font-weight:bold;
+	color: white;
+}
+
+.right{
+	position: absolute;
+	right: 0px;
+}
+.left{
+	position: absolute;
+	left: 0px;
+}
+.centre{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+}
+
+button.hfbutton{
+	position:relative;
+	background-color: black;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	font-size: 17px;
+	border: black 1px solid;
+	cursor: pointer;
+}
+button.hfbutton:hover{
+	border: white 1px solid;
+	margin: auto;
+	cursor: pointer;
+}
+
+															/*Andys stuff start */
+															li{
+																margin: 5px;
+															}
+.loginbox{
+	display: none;
+	position: fixed;/
+	background-color: rgb(211,211,211);
+	background-color: rgba(211,211,211,0.8);
+  max-width: 660px;
+  min-width: 650px;
+	z-index: 1;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	overflow: auto;
+	padding-top: 0%;
+}
+
+button.forgot{
+	position:relative;
+	background-color: black;
+	border:none;
+	color: white;
+	padding: 15px 32px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	font-size:15px;
+	text-align: center;
+	border: black 1px solid;
+}
+button.forgot:hover{
+	border:white 1px solid;
+}
+button.login{
+	position:relative;
+	background-color: black;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	margin:5px;
+	text-align: center;
+	font-size: 17px;
+	border: black 1px solid;
+	cursor: pointer;
+}
+button.login:hover{
+	border: 1px solid;
+}
+button.submit{
+	font-family: 'Work Sans', sans-serif;
+	position:relative;
+	background-color: black;
+	border: none;
+	padding:15px 32px;
+	margin:5px;
+	color: white;
+	font-size: 17px;
+	border: black 1px solid;
+}
+button.submit:hover{
+	border: 1px solid;
+}
+input[type=text]{
+	font-family: 'Work Sans', sans-serif;
+	position:relative;
+	background-color: white;
+	border: none;
+	padding:15px 18px;
+	margin:5px;
+	color: black;
+	font-size: 17px;
+	border: black 1px solid;
+}
+input[type=password]{
+	font-family: 'Work Sans', sans-serif;
+	position: relative;
+	background-color: white;
+	border: none;
+	color: black;
+	padding: 15px 18px;
+	margin-left: 5px;
+	margin-top:5px;
+	font-size: 17px;
+	border: black 1px solid;
+}
+
+
+button.fbutton{
+		position:relative;
+	background-color: black;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	margin: 15px 0px;
+	text-align: center;
+	font-size: 17px;
+	border: black 1px solid;
+	cursor: pointer;
+}
+button.fbutton:hover{
+	border:white 1px solid;
+	margin: auto;
+}
+.container{
+	padding: 16px;
+	background-color:#f1f1f1;
+}
+
+
+button.cancelbtn {
+	position:relative;
+	background-color: black;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	font-size: 17px;
+	border: black 1px solid;
+	cursor: pointer;
+}
+button.cancelbtn:hover{
+	border: white 1px solid;
+	margin: auto;
+}
+button.formcancel{
+	position:relative;
+	background-color: black;
+	border: none;
+	color: white;
+	padding: 15px 27px;
+	margin:5px;
+	text-align: center;
+	font-size: 17px;
+	border: black 1px solid;
+	cursor: pointer;
+}
+
+button.formcancel:hover{
+	border:white 1px solid;
+}
+
+.popup {
+		display: none; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Sit on top */
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		width: 100%; /* Full width */
+		height: 100%; /* Full height */
+		overflow: auto; /* Enable scroll if needed */
+		background-color: rgb(0,0,0); /* Fallback color */
+		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		padding-top: 10%;
+			font-family: 'Work Sans', sans-serif;
+}
+
+.popup-content {
+		background-color: #fefefe;
+		margin: 3% auto; /* 5% from the top, 15% from the bottom and centered */
+		border: 1px solid #888;
+		width: 94%; /* Could be more or less, depending on screen size */
+}
+
+.animate {
+		-webkit-animation: animatezoom 0.6s;
+		animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+		from {-webkit-transform: scale(0)} 
+		to {-webkit-transform: scale(1)}
+}
+		
+@keyframes animatezoom {
+		from {transform: scale(0)} 
+		to {transform: scale(1)}
+}
+
+
+															/*Andys stuff end */
