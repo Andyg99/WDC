@@ -1,39 +1,121 @@
 #header{
   position: fixed;
+  z-index: 100;
   top:0;
   left:0;
   width:100%;
-  height:50px;
+  height:6%;
   background-color:black;
   display: table;
   overflow: hidden;
 }
 
 #footer{
-  position:absolute;
+  position: fixed;
+  z-index: 100;
+  min-height: 10%;
   bottom:0;
   left:0;
   width:100%;
-  height:80px;
+  height:9%;
   background-color:black;
   display: table;
   overflow: hidden;
 }
 
-#homepage{
-  background-image: 
+#map{
+  z-index: 10;
+  display: inline-block;
+  float: right;
+  height: 700px;
+  position: fixed;
+  top: 40px;
+  bottom: 80px;
+  right:0;
+  overflow: auto;
 }
 
-div.breaker{
-  width:100%;
-  height:30px;
-  background-color:green;
+#map2{
+  z-index: 10;
+  display: inline-block;
+  width: 80%;
+  position: relative;
+  margin:auto;
+  bottom: 0%;
+  overflow: auto;
+  margin-bottom: 80px;
+}
+
+#resultsTable{
+  vertical-align: middle;
+  padding-right: 30px;
+  background-color: white;
+  z-index: 50;
+  padding-bottom: 100px;
+  position: absolute;
+  float:left;
+  width: 63%;
+  overflow: auto;
+}
+
+#hotelSearch{
+  left: 1%;
+  top: 10px;
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  position: relative;
+  width: 850px;
+  background: white;
+}
+
+#images{
+  display: relative;
+  top: 20px;
+  width: 80%;
+  height: 400px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+#hotelInfo{
+  text-align: justify;
+  float:left;
+  position: relative;
+  width: 40%;
+  height: 550px;
+  margin: 20px 0px 70px 150px;
+  right: 5px;
+  overflow: auto;
+}
+
+#hotelBook{
+  float:right;
+  position: relative;
+  width: 30%;
+  height: 550px;
+  margin: 20px 138px 70px 0px;
+  margin-bottom: 70px;
+  right: 5px;
+  overflow: auto;
+  background-color: dimgrey;
+}
+
+td.searchCell{
+  padding: 10px;
+  vertical-align: middle;
+  width: 50%;
+  font-size: 15px;
+  overflow: auto;
 }
 
 body{
   font-family: 'Work Sans', sans-serif;
-  background-color: black;
+  overflow: scroll;
 }
+
 
 span.title{
   position: fixed;
@@ -46,11 +128,22 @@ span.title{
   color: white;
 }
 
+.hotelData{
+  overflow: scroll;
+  height: 100%;
+  position: relative;
+  margin-bottom: 0px;
+}
+
 .right{
   position: absolute;
   right: 0px;
 }
 
+.socialLink{
+  color: white;
+  text-decoration: none;
+}
 
 .left{
   position: absolute;
@@ -65,10 +158,286 @@ button.hfbutton{
   padding: 15px 32px;
   text-align: center;
   font-size: 16px;
-  border: black 1px solid;
 }
 
 button.hfbutton:hover{
   border: white 1px solid;
   margin: auto;
 }
+
+.bookbutton{
+  position: absolute;
+  background-color: black;
+  padding: 20px 100px;
+  color: white;
+  font-size: 16px;
+  bottom: 5%;
+}
+
+.cwrapper{
+  display: flex;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-container {
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    margin-top: 150px;
+    border: 3px white;
+    z-index: 1;
+}
+
+/*SEARCH BAR*/
+.searchBox {
+  display: inline-block;
+  padding: 15px;
+  width:700px;
+  height: 50px;
+  background-color: rgba(70,70,70,0.5);
+  z-index: 100;
+}
+
+.searchBox input[type=text] {
+  height: 50px;
+  text-align: justify;
+  padding-right: 200px;
+  padding-left: 200px;
+  font-size: 17px;
+  border: none;
+}
+
+.searchBox button {
+  height: 52px;
+  padding-top: 2px;
+  width: 70px;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.searchBox button:hover {
+  background: #ccc;
+}
+
+/*container for slideshow*/
+.sscontainer {
+  min-width: 100%;
+  position: absolute;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/*animation*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*Andys stuff start */
+li.andli{margin: 5px;}
+
+.loginbox{
+display: none;
+position: fixed;/
+background-color: rgb(211,211,211);
+background-color: rgba(211,211,211,0.8);
+max-width: 660px;
+min-width: 650px;
+z-index: 100;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+overflow: auto;
+padding-top: 0%;
+}
+
+button.forgot{
+position:relative;
+background-color: black;
+border:none;
+color: white;
+padding: 15px 32px;
+margin-left: 5px;
+margin-bottom: 5px;
+font-size:15px;
+text-align: center;
+border: black 1px solid;
+}
+
+button.forgot:hover{
+border:white 1px solid;
+}
+
+button.login{
+position:relative;
+background-color: black;
+border: none;
+color: white;
+padding: 15px 32px;
+margin:5px;
+text-align: center;
+font-size: 17px;
+border: black 1px solid;
+cursor: pointer;
+}
+
+button.login:hover{
+border: 1px solid;
+}
+
+button.submit{
+font-family: 'Work Sans', sans-serif;
+position:relative;
+background-color: black;
+border: none;
+padding:15px 32px;
+margin:5px;
+color: white;
+font-size: 17px;
+border: black 1px solid;
+}
+
+button.submit:hover{
+border: 1px solid;
+}
+
+input.atext{
+font-family: 'Work Sans', sans-serif;
+position:relative;
+background-color: white;
+border: none;
+padding:15px 18px;
+margin:5px;
+color: black;
+font-size: 17px;
+border: black 1px solid;
+}
+
+input.apass{
+font-family: 'Work Sans', sans-serif;
+position: relative;
+background-color: white;
+border: none;
+color: black;
+padding: 15px 18px;
+margin-left: 5px;
+margin-top:5px;
+font-size: 17px;
+border: black 1px solid;
+}
+
+button.fbutton{
+position:relative;
+background-color: black;
+border: none;
+color: white;
+padding: 15px 32px;
+margin: 15px 0px;
+text-align: center;
+font-size: 17px;
+border: black 1px solid;
+cursor: pointer;
+}
+
+button.fbutton:hover{
+border:white 1px solid;
+margin: auto;
+}
+
+.container{
+padding: 16px;
+background-color:#f1f1f1;
+}
+
+button.cancelbtn {
+position:relative;
+background-color: black;
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+font-size: 17px;
+border: black 1px solid;
+cursor: pointer;
+}
+
+button.cancelbtn:hover{
+border: white 1px solid;
+margin: auto;
+}
+
+button.formcancel{
+position:relative;
+background-color: black;
+border: none;
+color: white;
+padding: 15px 27px;
+margin:5px;
+text-align: center;
+font-size: 17px;
+border: black 1px solid;
+cursor: pointer;
+}
+
+button.formcancel:hover{
+border:white 1px solid;
+}
+
+.popup {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1000; /* Sit on top */
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+padding-top: 10%;
+font-family: 'Work Sans', sans-serif;
+}
+
+.popup-content {
+background-color: #fefefe;
+margin: 3% auto; /* 5% from the top, 15% from the bottom and centered */
+border: 1px solid #888;
+width: 94%; /* Could be more or less, depending on screen size */
+}
+
+.animate {
+-webkit-animation: animatezoom 0.6s;
+animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+from {-webkit-transform: scale(0)}
+to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+from {transform: scale(0)}
+to {transform: scale(1)}
+}
+
+
+/*Andys stuff end */

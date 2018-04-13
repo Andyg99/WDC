@@ -4,11 +4,12 @@
     <link rel="stylesheet" type="text/css" href="staysa.css">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
     <script src="staysa.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
     <meta charset="utf-8">
     <title>STAY SA</title>
   </head>
-  <body onload = "showSlides()" style="background-color:black;">
+  <body onload = "startUpListing()">
     <!-- header area -->
       <div id="header">
         <a href="index.html">
@@ -61,45 +62,79 @@
       	</form>
       </div>
 
-    <!-- Images and Searchbar -->
-  <div class="sscontainer">
 
-    <div class="search-container">
-      <span style="font-size: 60px">BOOK YOUR STAY</span><br>
-      <span style="font-size: 100px; font-weight: bold;"><b>IN SA</b></span><br><br>
-       <div style="text-align:center">
-         <div class="searchBox">
-           <form id="searchForm" action="search.html" method="GET">
-             <input type="text" placeholder="Where in SA?..." name="Search">
-             <button type="submit"><i class="fa fa-search"></i></button>
-           </form>
-         </div>
-       </div>
-   </div>
+    <br><br>
 
-    <div class="theSlides fade">
-      <img src="images/adelaidepostoffice.jpg" style="width:100%" alt = "Post Office">
+    <div class="hotelData">
+      <div class="cwrapper">
+
+        <div class = "search-container" style="margin-top: 0px;">
+          <div id = "hmainname" class="searchBox" style="color: White; font-size: 40px; font-weight:bold;">
+          </div>
+        </div>
+
+        <div id="images">
+        </div>
+      </div>
+
+      <div id="hotelInfo">
+        <br>
+        <span id = "hname" style="font-size: 40px"></span><br>
+        <span id = "hlocation" style="font-size: 15px; font-style: italic;"></span><br>
+        <span id = "hphone" style="font-size: 15px;"></span><br><br>
+        <span id = "hdesc" style="font-size: 20px"></span><br><br>
+        <span style="font-size: 20px"><a href="" id = "hsite"></a></span><br><br>
+        <span style="font-size: 20px"><b>AMENITIES</b></span><br>
+        <span id = "hwifi" style="font-size: 20px"></span><br>
+        <span id = "hparking" style="font-size: 20px"></span><br>
+        <span id = "hpool" style="font-size: 20px"></span><br>
+        <span id = "hgym" style="font-size: 20px"></span><br>
+      </div>
+
+      <div id="hotelBook">
+        <div id="roomselect" style="text-align: center;">
+          <h2 style="color:white;">Select Room</h2>
+          <select style="width: 300px; height: 40px; font-size: 15px;" id="hroomtype">
+          </select>
+        </div>
+
+        <br>
+
+        <div id="dates" style="text-align: center; margin-bottom: 30px;">
+          <div id="checkindiv" style="float: left; margin-left: 40px;">
+            <h3 style="color:white;">Checkin Date</h3>
+            <input type="date" name="checking" style = "width: 160px; height: 40px; font-size: 15px;" >
+          </div>
+          <div id="checkoutdiv" style="float: right; margin-right: 40px;">
+            <h3 style="color:white;">Checkout Date</h3>
+            <input type="date" name="checking" style = "width: 160px; height: 40px; font-size: 15px;" >
+          </div>
+        </div>
+
+        <span style="color:dimgrey">hello</span>
+
+        <div id="people" style="text-align: center;">
+          <h3 style="color:white;">Number of Guests</h3>
+          <input type="number" value="0" style = "width: 160px; height: 40px; font-size: 15px;">
+        </div>
+
+        <div id="cost" style="text-align: center; color: white; font-size: 30px;">
+          <span id = "hcost">
+            <br>
+            Total Cost: <u>$350</u>
+          </span>
+        </div>
+
+        <div class="cwrapper">
+          <button type="button" class = "bookbutton" name="button">Book Now!</button>
+        </div>
+
+      </div>
     </div>
 
-    <div class="theSlides fade">
-      <img src="images/adelaidewildlife.jpg" style="width:100%" alt = "Wildlife">
-    </div>
-
-    <div class="theSlides fade">
-      <img src="images/adelaideglenelgbeach.jpg" style="width:100%" alt = "Beach">
-    </div>
-
-    <div class="theSlides fade">
-      <img src="images/adelaidevicsquare.jpg" style="width:100%" alt = "Victoria Square">
-    </div>
-
-    <div class="theSlides fade">
-      <img src="images/adelaide2KW.jpg" style="width:100%" alt = "2KW">
-    </div>
-
-  </div>
-
-    <br><br><br>
+      <div class="cwrapper">
+        <img src="images/map2.jpg" alt="GOOGLEMAPS PLACEHOLDER" id = "map2">
+      </div>
 
     <div id="footer">
       <span class="left" style = "position: absolute; bottom: 0px; text-align: center">
@@ -155,6 +190,6 @@
 				<button type="button" onclick="cancelsupport();" class="cancelbtn">Cancel</button>
 			</div>
 		</form>
-	 </div>
+	</div>
   </body>
 </html>

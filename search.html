@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <title>STAY SA</title>
   </head>
-  <body onload = "showSlides()" style="background-color:black;">
+  <body onload = "startUpSearch()">
     <!-- header area -->
       <div id="header">
         <a href="index.html">
@@ -61,45 +61,17 @@
       	</form>
       </div>
 
-    <!-- Images and Searchbar -->
-  <div class="sscontainer">
+    <!--searchbox-->
+    <input type="text" placeholder="SEARCH SA HOTELS.." name="search" id="hotelSearch"  onkeyup="searchHotels()">
+    <br>
 
-    <div class="search-container">
-      <span style="font-size: 60px">BOOK YOUR STAY</span><br>
-      <span style="font-size: 100px; font-weight: bold;"><b>IN SA</b></span><br><br>
-       <div style="text-align:center">
-         <div class="searchBox">
-           <form id="searchForm" action="search.html" method="GET">
-             <input type="text" placeholder="Where in SA?..." name="Search">
-             <button type="submit"><i class="fa fa-search"></i></button>
-           </form>
-         </div>
-       </div>
-   </div>
-
-    <div class="theSlides fade">
-      <img src="images/adelaidepostoffice.jpg" style="width:100%" alt = "Post Office">
+    <!--listings-->
+    <div class="listings">
+      <br>
+      <table id = "resultsTable" onload = "initialSearch()">
+      </table>
+      <img src="images/maps.jpg" alt="WILL BE REPLACED BY GOOGLE MAPS" id = "map">
     </div>
-
-    <div class="theSlides fade">
-      <img src="images/adelaidewildlife.jpg" style="width:100%" alt = "Wildlife">
-    </div>
-
-    <div class="theSlides fade">
-      <img src="images/adelaideglenelgbeach.jpg" style="width:100%" alt = "Beach">
-    </div>
-
-    <div class="theSlides fade">
-      <img src="images/adelaidevicsquare.jpg" style="width:100%" alt = "Victoria Square">
-    </div>
-
-    <div class="theSlides fade">
-      <img src="images/adelaide2KW.jpg" style="width:100%" alt = "2KW">
-    </div>
-
-  </div>
-
-    <br><br><br>
 
     <div id="footer">
       <span class="left" style = "position: absolute; bottom: 0px; text-align: center">
